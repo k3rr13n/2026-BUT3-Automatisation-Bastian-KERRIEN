@@ -26,4 +26,5 @@ coverage/
 .idea/
 .DS_Store
 
-tp-automatisation/db-data/
+db-data/*
+
