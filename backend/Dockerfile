@@ -1,3 +1,4 @@
+# ==== build ====
 FROM mcr.microsoft.com/dotnet/sdk:10.0
 
 WORKDIR /tp
@@ -8,6 +9,9 @@ RUN dotnet restore api.slnx
 
 RUN dotnet publish src/TaskList.Api/TaskList.Api.csproj -c Release -o /dossier_de_sortie 
 
+# ==== finale ====
+FROM mcr.microsoft.com/dotnet/aspnet:10.0
+
 EXPOSE 8080
 
 ENV ASPNETCORE_URLS=http://+:8080
@@ -15,3 +19,4 @@ ENV ASPNETCORE_URLS=http://+:8080
 WORKDIR /dossier_de_sortie
 
 CMD dotnet TaskList.Api.dll 
+
