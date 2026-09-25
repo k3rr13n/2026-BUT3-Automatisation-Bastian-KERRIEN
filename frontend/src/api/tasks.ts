@@ -15,7 +15,7 @@ export interface Task {
 }
 
 export interface CreateTaskInput {
-  title: string
+  title: string 
 }
 
 export interface UpdateTaskInput {

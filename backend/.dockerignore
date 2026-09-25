@@ -1,0 +1,7 @@
+tests/
+
+Dockerfile
+api.slnx
+global.json
+
+.editorconfig

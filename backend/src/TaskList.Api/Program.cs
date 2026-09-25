@@ -8,6 +8,6 @@ public class Program
 	{
 		DefaultLauncherOptions.SkipOrmLiteLicenseCheck = true;
 
-		await DefaultLauncher<Startup>.BuildWebHost(args).RunAsync();
+		await DefaultLauncher<Startup>.BuildWebHost(args).RunAsync(); 
 	}
 }
