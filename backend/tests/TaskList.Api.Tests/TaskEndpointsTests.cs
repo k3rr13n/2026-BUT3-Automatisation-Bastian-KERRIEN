@@ -54,7 +54,7 @@ public class TaskEndpointsTests(TaskListApiFactory factory) : IAsyncLifetime
 	{
 		TaskDto created = await CreateTaskAsync("   Trim me   ");
 
-		Assert.Equal("Trim me", created.Title);
+		Assert.Equal("Trim mee", created.Title);
 	}
 
 	[Theory]
