@@ -112,3 +112,10 @@ real    0m16,603s
 user    0m0,110s
 sys     0m0,062s
 ```
+
+### Etape 5
+
+Le job qui échoue est le job api, celui qui a l'assert modifié. Le job front s'execute quand meme.
+
+
+
