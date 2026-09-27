@@ -117,5 +117,10 @@ sys     0m0,062s
 
 Le job qui échoue est le job api, celui qui a l'assert modifié. Le job front s'execute quand meme.
 
+Entre mon push et le temps ou je me suis rendu compte qu c'était cassé il c'est passé 15min
 
+### Etape 6
 
+**1 /**  
+**2 /**  
+**3 /** L'erreur de workflow que j'ai rencontré était sur le path du fichier de test du backend et du frontend, j'avais mis un mauvais chemin.
