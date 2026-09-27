@@ -30,10 +30,10 @@ jobs:
         run: dotnet test api.slnx --no-restore --no-build --configuration Release --results-directory ./TestResults --report-xunit-trx
 
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-        name: resultats-tests-api
-        path: '**/TestResults/*.trx'
+          name: backend-test-results
+          path: ./backend/TestResults
+        if: always()
 
   front:
     runs-on: ubuntu-latest
@@ -63,6 +63,6 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: resultats-tests-api
-          path: '**/TestResults/*.trx'
+          name: frontend-test-results
+          path: ./frontend/TestResults
         if: always()
