@@ -121,6 +121,6 @@ Entre mon push et le temps ou je me suis rendu compte qu c'était cassé il c'es
 
 ### Etape 6
 
-**1 /**  
-**2 /**  
-**3 /** L'erreur de workflow que j'ai rencontré était sur le path du fichier de test du backend et du frontend, j'avais mis un mauvais chemin.
+**1 /** Le plus gros gain de taille c'est fait sur la partie backend, apres l'ajout du dockerfile multi-stage et du dockerignore. Le plus gros gain de temps c'est fait sur la partie frontend, pour la reconstruction du fichier apres modification d'une ligne de code. Ce ne sont pas les meme car les modifications apportées a l'un ne sont pas les meme que pour l'autre  
+**2 /** Pour réduire ce temps, il faudrait détecter l'erreur plus tot.
+**3 /** L'erreur de workflow que j'ai rencontré était sur le path du fichier de test du backend et du frontend, j'avais mis un mauvais chemin.  
