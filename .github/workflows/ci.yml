@@ -21,7 +21,7 @@ jobs:
           cache-dependency-path: backend/**/packages.lock.json
 
       - name: Restaurer les dépendances
-        run: dotnet restore api.slnx --no-cache
+        run: dotnet restore api.slnx #--no-cache
 
       - name: Compiler
         run: dotnet build api.slnx --no-restore --configuration Release
