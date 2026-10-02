@@ -11,13 +11,14 @@ import TaskListItem from './TaskListItem'
 
 export default function TaskList() {
   const { data: tasks, isPending, isError, error } = useTasks()
-  let { notifyError } = useNotifications()
+  const { notifyError } = useNotifications()
+  const errorMessage = error?.message ?? 'Unknown error'
 
   useEffect(() => {
     if (isError) {
-      notifyError(`Could not load the tasks: ${error.message}`)
+      notifyError(`Could not load the tasks: ${errorMessage}`)
     }
-  }, [isError, notifyError])
+  }, [isError, errorMessage, notifyError])
 
   if (isPending) {
     return (
