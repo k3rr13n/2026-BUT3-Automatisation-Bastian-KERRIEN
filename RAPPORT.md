@@ -124,3 +124,17 @@ Entre mon push et le temps ou je me suis rendu compte qu c'était cassé il c'es
 **1 /** Le plus gros gain de taille c'est fait sur la partie backend, apres l'ajout du dockerfile multi-stage et du dockerignore. Le plus gros gain de temps c'est fait sur la partie frontend, pour la reconstruction du fichier apres modification d'une ligne de code. Ce ne sont pas les meme car les modifications apportées a l'un ne sont pas les meme que pour l'autre  
 **2 /** Pour réduire ce temps, il faudrait détecter l'erreur plus tot.
 **3 /** L'erreur de workflow que j'ai rencontré était sur le path du fichier de test du backend et du frontend, j'avais mis un mauvais chemin.  
+
+## TP 3
+### Etape 3.1
+La configuration ESLint du projet contient 3 problemes, 2 erreurs et 1 warning
+
+## Etape 3.3
+Parmi les erreurs corrigées, deux d'entre elles concernait un mauvait type. Les varibles était déclarées en let alors qu'elle n'ont jamais de nouvelles variable. En revanche, le warning pouvait etre un bug potentiel car cela peut affecter la gestion et la correction des erreurs.
+
+## Etape 4.3
+La meilleur option dans notre cas serait l'option B. En effet, c'est peut etre la solution la moins correct sur le papier mais cela nous permet de ne pas bloquer sur des tests complexe a resoudre et couteux en temps. C'est la solution la plus rapide dans l'immediat
+
+## Etape 5.2
+`ignore-unfixed: true` est utile dans les deux cas. En developpement elle evite que l'on ai des erreurs insolubles. En production, cette ligne reste utile pour les gros projet car une erreur insoluble peut arriver dans certaines situation et le fait que cela bloque est tres problematique pour le bon fonctionnement du service
+
